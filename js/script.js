@@ -261,7 +261,7 @@ function updateChart(f){
         } ,
          { 
           "label" : "Projected Population 2020" , 
-          "value" : f.pop2000*1.2
+          "value" : f.pop2000*1.15
         },
         { 
           "label" : "Projected Population 2030" , 
