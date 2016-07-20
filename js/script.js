@@ -74,7 +74,7 @@ var panOptions = {
 
   var geojson;
 
-  $.getJSON('data/cfa.geojson', function(data) {
+  $.getJSON('data/dem.geojson', function(data) {
     geojson = L.geoJson(data, {
     	style: style,
     	onEachFeature: onEachFeature
@@ -134,7 +134,7 @@ var panOptions = {
     });
     updateChart(layer.feature.properties);
     updateChart2(layer.feature.properties);
-    $('#side2').html('<h3>' + layer.feature.properties.NTAName + ' ' + layer.feature.properties.ntacode + '</h3>');
+    $('#side2').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode + '</h3>');
    
 
 
@@ -172,10 +172,10 @@ var panOptions = {
     console.log(currNTAname);
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h3>' + layer.feature.properties.NTAName + ' ' + layer.feature.properties.ntacode +'</h3>' + '<h4>' + 'Total Population' + '</h4>');
+    $('#side').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode +'</h3>' + '<h4>' + 'Total Population' + '</h4>');
   	
 
-    $('#side2').html('<h3>' + layer.feature.properties.NTAName + ' ' + layer.feature.properties.ntacode + '</h3>');}
+    $('#side2').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode + '</h3>');}
    
 
   function resetHighlight(e) {
@@ -252,20 +252,20 @@ function updateChart(f){
   rentData[0].values =
     [
         { 
-          "label" : "Total Population 2000" , 
-          "value" : f.pop2000
+          "label" : "Total Population 2010" , 
+          "value" : f.pop10
         } , 
         { 
-          "label" : "Total Population 2010" , 
-          "value" : f.pop2010
+          "label" : "Total Population 2015" , 
+          "value" : f.pop15
         } ,
          { 
           "label" : "Projected Population 2020" , 
-          "value" : f.pop2000*1.15
+          "value" : f.pop20
         },
         { 
-          "label" : "Projected Population 2030" , 
-          "value" : f.pop2010*1.3
+          "label" : "Projected Population 2025" , 
+          "value" : f.pop25
         } 
       ]
     d3.select('#chart svg')
@@ -307,19 +307,19 @@ function updateChart2(f2){
     [
         { 
           "label" : "Child (<5)" , 
-          "value" : f2.Child5
+          "value" : f2.child
         } , 
         { 
           "label" : "Youth (5-19)" , 
-          "value" : f2.Youth5_19
+          "value" : f2.youth
         } ,
          { 
           "label" : "Adult (20-60)" , 
-          "value" : f2.Adult20_60
+          "value" : f2.adult
         },
         { 
           "label" : "Senior (>60)" , 
-          "value" : f2.Senior60
+          "value" : f2.senior
         } 
       ]
     d3.select('#chart2 svg')
