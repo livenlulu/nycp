@@ -79,7 +79,7 @@ $(function updateChart3() {
     },
 
     yAxis: {
-        categories: ['YA','DA','SA','LA'],
+        categories: ['Youth Access','Daycare Access','Senior Access','Library Access'],
         title: null
     },
 
