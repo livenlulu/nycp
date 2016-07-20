@@ -29,7 +29,7 @@ $(function updateChart3() {
 
 
 
-        $.get('nta2.csv', function(csv) {
+        $.get('data/nta2.csv', function(csv) {
          $('#matrix').highcharts({
 
 
@@ -79,7 +79,7 @@ $(function updateChart3() {
     },
 
     yAxis: {
-        categories: ['Youth Access','Daycare Access','Senior Access','Library Access'],
+        categories: ['Daycare Access','Youth Access','Senior Access','Library Access'],
         title: null
     },
 
