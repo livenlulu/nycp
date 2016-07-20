@@ -2,6 +2,7 @@
         padding: 0;
         margin: 0;
         padding-top: 46px;
+        color: #000;
     }  
 
     html, body {
@@ -9,7 +10,7 @@
         width: 100%;
         font-size:13px;
 
-        font-family: 'Oswald';  
+        font-family: 'Dosis';  
     }
 
 
@@ -35,7 +36,7 @@
        font-family: 'Dosis';
         font-size: 16px;
         font-weight: 700;
-        color: grey;
+        color: black;
     }
     h3 {
         padding-top: 10px;
@@ -56,7 +57,7 @@
     h6 {
         font-family: 'Dosis';
         color: #000;
-        font-size:13px;
+        font-size:15px;
     }
 
     ul {
@@ -250,9 +251,9 @@
 
     #myMap {
 	    height: 50%;
-        width: 80%;
+        width: 75%;
         padding-left: 10%;
-        margin-left: 10%;
+        margin-left: 20%;
         margin-top: 1%;
 	    position: relative;
         box-shadow: 0 0 10px rgba(0,0,0,0.55);
