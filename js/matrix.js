@@ -1,4 +1,3 @@
-
 var ntaNames = [];
 var currMatrixNTA;
 var geo = $.getJSON( "cfa.geojson", function(data) {
@@ -14,112 +13,87 @@ var chart3;
 
 var xLabels = ["Inefficient", "Efficient"];
 
-
 $(function updateChart3() {
     chart3Data[0].key = 'prop.NTAName';
     chart3Data[0].values = 'this.series.yAxis.categories';
-
-
-
-        // chart3Data[0].values =
-        // [(this.series.xAxis.categories[this.point.x])
-
-        // ]
-
-
-
 
         $.get('data/nta2.csv', function(csv) {
          $('#matrix').highcharts({
 
 
-          chart: {
+        chart: {
             type: 'heatmap',
             marginTop: 40,
             marginBottom: 40,
             // width: 1300,
             // height: 250,
-
             backgroundColor: '#fff',
-
-
             style: {
                fontFamily: "Dosis"
-           }
-       },
+                }
+        },
 
-       exporting: { enabled: false },
+        exporting: { 
+            enabled: false 
+        },
 
-       itemStyle: {
+        itemStyle: {
            color: '#E0E0E3'
-       },
+        },
 
-
-       itemHoverStyle: {
+        itemHoverStyle: {
            color: '#FFF'
-       },
-       itemHiddenStyle: {
+        },
+
+        itemHiddenStyle: {
            color: '#365775'
-       },
+        },
 
+        title: {
+            text: ''
+        },
 
+        xAxis: {
+            minorTickLength: 0,
+            tickLength: 0,
+            categories: ntaNames,
+            labels: {
+                format: '{value}'
+            }
+        },
 
+        yAxis: {
+            categories: ['Daycare Access','Youth Access','Senior Access','Library Access'],
+            title: null
+        },
 
-       title: {
-        text: ''
-    },
-
-    xAxis: {
-        minorTickLength: 0,
-        tickLength: 0,
-        categories: ntaNames,
-        labels: {
-            format: '{value}'
-        }
-    },
-
-    yAxis: {
-        categories: ['Daycare Access','Youth Access','Senior Access','Library Access'],
-        title: null
-    },
-
-
-
-    colorAxis: {
-
-        stops: [
-        [0,'#9E0142'],
-        [0.05,'#F46D43'],
-        [0.25,'#FDAE61'],
-        [0.4,'#E6F598'],
-        [0.5,'#ABDDA4'],
-        [1,'#0C2943']
-
-                // [0,'#8399AD'],
-                // [0.3,'#57758F'],
-                // [0.6,'#20415F'],
-                // [0.8,'#0C2943']
-                
-                ],
-                min: 0,
-                labels: {
-                    formatter: function() {
-                        return xLabels[this.value];
+        colorAxis: {
+            stops: [
+            [0,'#9E0142'],
+            [0.05,'#F46D43'],
+            [0.25,'#FDAE61'],
+            [0.4,'#E6F598'],
+            [0.5,'#ABDDA4'],
+            [1,'#0C2943']
+            ],
+            
+            min: 0,
+            labels: {
+                formatter: function() {
+                    return xLabels[this.value];
                     }
                 }
 
             },
 
             style: {
-
               plotBorderColor: '#FFFFFF'
-          },
+            },
 
-          plotOptions: {
-            candlestick: {
+            plotOptions: {
+                candlestick: {
                 lineColor: '#ffffff'
             }
-
         },
 
         legend: {
@@ -157,12 +131,9 @@ $(function updateChart3() {
             enabled: false
         },
 
-
-        
         data: {
             csv: csv
         },
-
 
         plotOptions: {
             series: {
@@ -195,6 +166,5 @@ series: [{
 
     });
 });
-
 
 });
