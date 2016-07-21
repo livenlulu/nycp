@@ -13,7 +13,6 @@
         font-family: 'Dosis';  
     }
 
-
     a {
         color: #000;
     }
@@ -38,6 +37,7 @@
         font-weight: 700;
         color: black;
     }
+
     h3 {
         padding-top: 10px;
     	font-family: 'Dosis';
@@ -75,14 +75,12 @@
         height: 100%;
     }
 
-
     .col-xs-6, .col-md-6 {
         padding-left: 0px;
         /*padding-top: 0px;*/
         padding-right: 0px;
         position: relative;
         height: 100%;
-
     }
 
     .col-md-3 {
@@ -96,8 +94,7 @@
     }
 
     .navbar-default .navbar-nav>li>a
-
-     {
+    {
         color: #444444;
     }
 
@@ -111,6 +108,7 @@
         border-radius: 0px;
        /* background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);*/
     }
+    
     .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     /*   transition-delay: 0s;
     transition-duration: .6s;
@@ -122,11 +120,6 @@
         */
     }
 
-
-/*    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
-    {
-        color:#1073C4;
-    }*/
     .navbar-default {
             position: fixed;
             right:0;
@@ -156,13 +149,6 @@
         text-transform: uppercase;
     }
 
-/*    .navbar-right a.dropdown-toggle {
-        top: 0;
-        height:36px;
-    }*/
-
-
-
     #container {
         height:100%;
         width: 100%;
@@ -177,8 +163,7 @@
 	    line-height: 15px;
     }
 
-    #side {
-        
+    #side {    
         height:100%;
        /* width: 100%;*/
     }
@@ -228,7 +213,6 @@
     .input-group {
         border-radius: 20px;
     }
-
 
     #colors {
         display: table-row;
@@ -301,20 +285,17 @@
     #infoWindow li.min {
         float: left;
         text-transform: uppercase;
-        
     }
 
     #infoWindow li.max {
         float: right;
         text-transform: uppercase;
-       
     }
 
     #infoWindow ul {
       list-style:none;
       -webkit-padding-start: 10px;
       -webkit-padding-end: 10px;
-
     }
 
     #infoWindow h5 {
@@ -353,8 +334,6 @@
         width: 70%;
     }
 
-  
-
     text {
         font: 12px sans-serif;
     }
@@ -363,8 +342,6 @@
         height: auto;
         width:auto;
     }
-
-  
 
     g.nvd3 .nv-wrap .nv-discreteBarWithAxes {
         transform-origin: 0px 0px 0px;
@@ -384,12 +361,6 @@
     #sq1 {
         color: #4daf4a;
     }
-/*
-    chartContainer {
-        border-top: 1px dashed #504B9D;
-        padding-top: 7px;
-        margin-top: 9px;
-    }*/
 
     #matrix {
         height: 280px;
@@ -397,19 +368,12 @@
         padding-left: 2%;
         background-color: #fff;
         width: 97%;
-
     }
 
     .highcharts-data-labels {
         visibility: hidden;
     }
 
-
-.highcharts-xaxis-labels {
+    .highcharts-xaxis-labels {
      visibility: hidden;
-}
-
-
-    text{
-        font-family: arial;
     }
