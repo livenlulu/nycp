@@ -1,6 +1,6 @@
 var ntaNames = [];
 var currMatrixNTA;
-var geo = $.getJSON( "cfa.geojson", function(data) {
+var geo = $.getJSON( "data/cfa.geojson", function(data) {
   for (var item in geo.responseJSON.features){
     var prop = geo.responseJSON.features[item].properties;
     ntaNames.push(prop.NTAName);
