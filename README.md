@@ -2,6 +2,6 @@
 
 Using leaflet map with D3 charts and highchart 
 
-![Alt text](data/screenshot.png)
+<kbd><a href="https://livenlulu.github.io/nycp/"><img src="data/screenshot.png" style="max-width:100%;"/></a></kbd><br><br>
 
-[Demo](https://livenlulu.github.io/nycp/)
+##[Demo](https://livenlulu.github.io/nycp/)
