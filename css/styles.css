@@ -80,8 +80,11 @@
         /*padding-top: 0px;*/
         padding-right: 0px;
         position: relative;
-/*        height: 100%;
-*/    }
+    }
+
+    .map6 {
+        height: 100%;
+    }
 
     .col-md-3 {
         height: 100%;
