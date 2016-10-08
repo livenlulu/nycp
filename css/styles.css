@@ -237,7 +237,7 @@
     }
 
     #myMap {
-	    height: 50%;
+	    height: 43%;
         width: 75%;
         padding-left: 10%;
         margin-left: 20%;
@@ -322,10 +322,10 @@
     .sidebar-cell {   
         display: block;
         overflow: scroll;
-        padding-top:20px;
+        padding-top:0px;
         padding-left:20px;
         padding-right:20px;
-        height:55%;
+  /*      height:55%;*/
     }
 
     .sidesmall {
@@ -344,7 +344,7 @@
     #left {
         padding-top:10px;
         float: left;
-        width: 70%;
+        width: 80%;
         height: 100%;
        
     }

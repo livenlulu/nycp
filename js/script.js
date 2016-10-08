@@ -4,7 +4,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}
 
 var NTAleaflet = {};
 
-var map = L.map('myMap',{tap:false}).setView( [40.731649,-73.924255], 10);
+var map = L.map('myMap',{tap:false}).setView( [40.731649,-73.924255], 11);
 map.addLayer(layer);
 
 var rentData = [];
