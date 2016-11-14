@@ -23,13 +23,13 @@ $(function updateChart3() {
 
         chart: {
             type: 'heatmap',
-            marginTop: 40,
-            marginBottom: 40,
+            marginTop: 30,
+            marginBottom: 50,
             // width: 1300,
             // height: 250,
             backgroundColor: '#fff',
             style: {
-               fontFamily: "Dosis"
+               fontFamily: "Maven Pro"
                 }
         },
 
@@ -63,21 +63,29 @@ $(function updateChart3() {
         },
 
         yAxis: {
-            categories: ['Daycare Access','Youth Access','Senior Access','Library Access'],
-            title: null
+            categories: ['Daycare','Youth','Senior','Library'],
+            title: null,
+            style: {
+               fontFamily: "Maven Pro"
+                }
         },
+
 
         colorAxis: {
             stops: [
+                                       
             [0,'#9E0142'],
             [0.05,'#F46D43'],
             [0.25,'#FDAE61'],
             [0.4,'#E6F598'],
             [0.5,'#ABDDA4'],
             [1,'#0C2943']
+
             ],
             
             min: 0,
+            
+
             labels: {
                 formatter: function() {
                     return xLabels[this.value];
@@ -97,12 +105,15 @@ $(function updateChart3() {
         },
 
         legend: {
-            align: 'right',
-            layout: 'vertical',
+            align: 'top',
+            layout: 'horizontal',
+            
             margin: 0,
-            verticalAlign: 'top',
-            y: 20,
-            symbolHeight: 205
+            verticalAlign: 'middle',
+            y: 118,
+            x: 45,
+            
+            symbolHeight: 8
         },
 
         tooltip: {

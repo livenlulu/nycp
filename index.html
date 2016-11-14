@@ -7,6 +7,7 @@
 
     <title>NYC Neighborhood Profiles</title>
 
+    <link href="https://fonts.googleapis.com/css?family=Maven+Pro" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/paper/bootstrap.min.css" rel="stylesheet" integrity="sha384-2mX2PSpkRSXLQzmNzH3gwK6srb06+OfbDlYjbog8LQuALYJjuQ3+Yzy2JIWNV9rW" crossorigin="anonymous">
@@ -25,103 +26,33 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-default" >
+     <nav class="navbar navbar-default" >
       <div class="container-fluid">
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
             <span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="#">
-          <span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span>&nbsp;Neighborhood Profiles, NYC</a>
+
+          <span class="glyphicon glyphicon-equalizer"></span>&nbsp; NYC District Profiles</a>
         </div>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li>
-            <a href="https://livenlulu.github.io/nprofiles/"target="_blank"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Spotlight</a>
-          </li>
-          <li>
-            <a href="#" data-toggle="collapse" data-target=".navbar-collapse.in" id="about-btn"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;ABOUT</a>
-          </li>
-        </ul>
-      </div>    
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="https://livenlulu.github.io/nprofiles/"target="_blank"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Spotlight</a>
+            </li>
+            <li>
+              <a href="#" id="about-btn"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>&nbsp;About</a>
+            </li>
+          </ul>
+      </div>  
+      </div>  
     </nav>
 
-    <div id="container">
-
-      <div class="row">
-
-        <div id="matrix">
-        </div>
-
-        <div class="col-xs-6 col-md-6 map6">
-          <div id="myMap"></div>
-        </div>
-
-        <div class="col-xs-6 col-md-6 sidebar-cell">
-          <div id="side2">
-            <h3>New York City</h3>
-          </div>
-
-        <div class="col-xs-6 col-md-6 sidesmall">
-        
-          <div id="left">
-            <h4>Total Population <br>by Year (#)</h4>
-            <h6>
-              <i class="fa fa-square" style="color: #BDC3C7;"></i>&nbsp;2010
-              <i class="fa fa-square" style="color: #A6ACAF;"></i>&nbsp;2015
-              <i class="fa fa-square" style="color: #909497;"></i>&nbsp;2020
-              <i class="fa fa-square" style="color: #797D7F;"></i>&nbsp;2025
-            </h6>
-            
-              <div id="chart">
-                <svg style="width: 100%;"></svg>
-              </div>           
-              
-          </div>
-        </div>
-
-        <div class="col-xs-6 col-md-6 sidesmall">
-        
-          <div id="left">
-            <h4>Population Distribution <br>by Age (%)</h4>
-            <h6>
-              <i class="fa fa-square" style="color: #BDC3C7;"></i>&nbsp;&lt;5
-              <i class="fa fa-square" style="color: #A6ACAF;"></i>&nbsp;5-19
-              <i class="fa fa-square" style="color: #909497;"></i>&nbsp;20-60
-              <i class="fa fa-square" style="color: #797D7F;"></i>&nbsp;&gt;60
-            </h6>
-            
-            <div id="chart2">
-              <svg style="width: 100%;"></svg>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-     <!--  <div id="infoWindow" >
-        <h5>ALLOCATED FUNDS<br>AT NTA LEVEL</h5>
-          <ul>
-            <li class="graph">
-              <div id="colors">
-                <div class="quartile" style="background-color:#FFEDA0"></div>
-                <div class="quartile" style="background-color:#FED976"></div>
-                <div class="quartile" style="background-color:#FEB24C"></div>
-                <div class="quartile" style="background-color:#FD8D3C"></div>
-                <div class="quartile" style="background-color:#FC4E2A"></div>
-                <div class="quartile" style="background-color:#E31A1C"></div>
-                <div class="quartile" style="background-color:#BD0026"></div>
-                <div class="quartile" style="background-color:#900410"></div>
-              </div>
-            </li>
-            <li class="min">$</li>
-            <li class="max">$$$$</li><br><br>
-          </ul>
-      </div> -->
 
     <div class="modal fade" id="aboutModal" tabindex="-1" role="dialog" style="margin-top:50px">
       <div class="modal-dialog modal-lg">
@@ -163,21 +94,83 @@
           </div>
         </div>
       </div>
+    </div>  
+
+    <div id="container">
+
+      <div class="row">
+
+        <div id="matrix">
+        </div>
+
+
+
+        <div class="col-xs-6 col-md-6 map6">
+          <div id="myMap"></div>
+        </div>
+
+        <div class="col-xs-6 col-md-6 sidebar-cell">
+          <div id="side2">
+            <h3>New York City</h3>
+          </div>
+
+        <div class="col-xs-6 col-md-6 sidesmall">
+        
+          <div id="left">
+            <h4>Total Population <br>by Year (#)</h4>
+            <h6>
+              <i class="fa fa-square" style="color: #BDC3C7;"></i>&nbsp;2010
+              <i class="fa fa-square" style="color: #A6ACAF;"></i>&nbsp;2015
+              <i class="fa fa-square" style="color: #909497;"></i>&nbsp;2020
+              <i class="fa fa-square" style="color: #797D7F;"></i>&nbsp;2025
+            </h6>
+            
+              <div id="chart">
+                <svg style="width: 100%;"></svg>
+              </div>           
+              
+          </div>
+        </div>
+
+        <div class="col-xs-6 col-md-6 sidesmall">
+        
+          <div id="left">
+            <h4>Population Dist. <br>by Age (%)</h4>
+            <h6>
+              <i class="fa fa-square" style="color: #BDC3C7;"></i>&nbsp;&lt;5
+              <i class="fa fa-square" style="color: #A6ACAF;"></i>&nbsp;5-19
+              <i class="fa fa-square" style="color: #909497;"></i>&nbsp;20-60
+              <i class="fa fa-square" style="color: #797D7F;"></i>&nbsp;&gt;60
+            </h6>
+            
+            <div id="chart2">
+              <svg style="width: 100%;"></svg>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
     </div>
 
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  
+
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
     <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
 
-    <script src="js/script.js"></script>
-    <script src="js/matrix.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/data.js"></script>
     <script src="https://code.highcharts.com/modules/heatmap.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="js/script.js"></script>
+    <script src="js/matrix.js"></script>
 
   </body>
 </html>

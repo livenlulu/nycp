@@ -4,7 +4,7 @@ var layer = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}
 
 var NTAleaflet = {};
 
-var map = L.map('myMap',{tap:false}).setView( [40.731649,-73.924255], 11);
+var map = L.map('myMap',{tap:false}).setView( [40.731649,-73.924255], 10);
 map.addLayer(layer);
 
 var rentData = [];
@@ -22,12 +22,15 @@ var chart2;
   return false;
     });
 
+
+
+
 var geojson;
 
   $.getJSON('data/dem.geojson', function(data) {
     geojson = L.geoJson(data, {
-    	style: style,
-    	onEachFeature: onEachFeature
+      style: style,
+      onEachFeature: onEachFeature
     }).addTo(map);
     updateChart(data.features[currid].properties);
     updateChart2(data.features[currid].properties);
@@ -103,10 +106,10 @@ var geojson;
     //updateChart3(e.target.this.series.xAxis.categories);
 
     currNTAname = e.target.feature.properties.NTAName;
-    console.log(currNTAname);
+    // console.log(currNTAname);
 
     // console.log(layer.feature.properties.VALUE2);
-    $('#side').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode +'</h3>' + '<h4>' + 'Total Population' + '</h4>'); 	
+    $('#side').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode +'</h3>' + '<h4>' + 'Total Population' + '</h4>');  
     $('#side2').html('<h3>' + layer.feature.properties.Name + ' ' + layer.feature.properties.NTACode + '</h3>');}
    
 
@@ -125,11 +128,11 @@ var geojson;
     });
   }
 
-  //dropdown scroll
-  $(".dropdown-menu li a").click(function(){
-  var selText = $(this).text();
-  $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
-  });
+  // //dropdown scroll
+  // $(".dropdown-menu li a").click(function(){
+  // var selText = $(this).text();
+  // $(this).parents('.dropdown').find('.dropdown-toggle').html(selText+' <span class="caret"></span>');
+  // });
 
   //bar chart
   nv.addGraph(function() {

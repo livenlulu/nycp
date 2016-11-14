@@ -1,7 +1,6 @@
     body {
         padding: 0;
         margin: 0;
-        padding-top: 46px;
         color: #000;
     }  
 
@@ -9,8 +8,7 @@
         height: 100%;
         width: 100%;
         font-size:13px;
-
-        font-family: 'Dosis';  
+        font-family: 'Maven Pro';  
     }
 
     a {
@@ -24,7 +22,7 @@
 
     h1 {
         padding-top: 10px;
-        font-family: 'Dosis';
+        font-family: 'Maven Pro';
         font-size: 20px;
         font-weight: 700;
         margin-top: 0px;
@@ -32,32 +30,36 @@
     }
 
     h2 {
-       font-family: 'Dosis';
+       font-family: 'Maven Pro';
         font-size: 16px;
         font-weight: 700;
         color: black;
+
     }
 
     h3 {
         padding-top: 10px;
-    	font-family: 'Dosis';
-    	font-size: 20px;
-    	font-weight: 700;
-    	margin-top: 0px;
+        font-family: 'Maven Pro';
+        font-size: 17px;
+        font-weight: 700;
+        margin-top: 0px;
         color: #000;
+        padding-left:5px;
     }
 
     h4 {
-    	font-family: 'Dosis';
-    	font-size: 16px;
-    	font-weight: 400;
+        font-family: 'Maven Pro';
+        font-size: 14px;
+        font-weight: 500;
         color: #000;
+        margin-top: 0px;
+        margin-bottom: 6px;
     }
 
     h6 {
-        font-family: 'Dosis';
-        color: #000;
-        font-size:15px;
+        font-family: 'Maven Pro';
+        color: #666;
+        font-size:12px;
     }
 
     ul {
@@ -90,68 +92,6 @@
         height: 100%;
     }
 
-    .navbar-default .navbar-brand 
-    {
-        color: #000;
-
-    }
-
-    .navbar-default .navbar-nav>li>a
-    {
-        color: #444444;
-    }
-
-    .navbar {
-    	margin-bottom: 0px;
-        /*position:relative;*/
-        width:100%;
-        border-bottom: #ffffff;
-        font-family: 'Montserrat';
-        height:45px;
-        border-radius: 0px;
-       /* background-image: linear-gradient(to bottom, #2b6988 0%, #1f4b61 100%);*/
-    }
-    
-    .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    /*   transition-delay: 0s;
-    transition-duration: .6s;
-    transition-timing-function: cubic-bezier(.19,1,.22,1);
-    -webkit-transform-origin: 50% 50%;
-    transform-origin: 50% 50%;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-        */
-    }
-
-    .navbar-default {
-            position: fixed;
-            right:0;
-            top:0;
-            z-index:130;
-            background-color: #fff;
-            /*border: 1px solid #ffffff;*/
-            border-bottom: 0px solid #ccc;
-            color: #000;
-            background-color: #f5f5f3;
-            /*#1b519f*/
-    }
-
-    .navbar-brand {
-        top: 15px;
-    	font-family: 'Open Sans';
-    	text-transform: uppercase;
-        font-size:17px;
-        height:45px;
-        color: #fff;
-    }
-
-    .navbar-right {
-        margin-top: 0px;
-        font-family: 'Montserrat';
-        font-weight: 700;
-        text-transform: uppercase;
-    }
-
     #container {
         height:100%;
         width: 100%;
@@ -161,9 +101,9 @@
     }
 
     .myButton {
-	    margin: 3px;
-	    padding: 8px;
-	    line-height: 15px;
+        margin: 3px;
+        padding: 8px;
+        line-height: 15px;
     }
 
     #side {    
@@ -237,12 +177,14 @@
     }
 
     #myMap {
-	    height: 260px;
-        width: 73%;
+        height: 260px;
+        width: 85%;
+        min-width: 160px;
         padding-left: 10%;
-        margin-left: 20%;
+        margin-left: 10%;
         margin-top: 1%;
-	    position: relative;
+        padding-right: 10px;
+        position: relative;
         box-shadow: 0 0 10px rgba(0,0,0,0.55);
         overflow: scroll;
     }
@@ -323,14 +265,14 @@
         display: block;
         overflow: scroll;
         padding-top:0px;
-        padding-left:20px;
-        padding-right:20px;
-  /*      height:55%;*/
+        padding-left:10px;
+        padding-right:10px;
+        height:320px;
     }
 
     .sidesmall {
-        padding-left:15px;
-        height: 80%;
+        padding-left:10px;
+        height: 200px;
     }
 
     #chart {
@@ -342,15 +284,17 @@
 
 
     #left {
-        padding-top:10px;
+        padding-top:0px;
         float: left;
-        width: 80%;
+        width: 96%;
         height: 100%;
        
     }
 
     text {
-        font: 12px sans-serif;
+        font: 11px sans-serif;
+        font-family: Maven Pro;
+
     }
     
     #chart svg {
@@ -380,10 +324,12 @@
     #matrix {
         height: 280px;
         padding-top: 0px;
-        padding-left: 2%;
+        padding-left: 0%;
         background-color: #fff;
-        width: 97%;
+        width: 100%;
+/*        min-width: 290px;*/
     }
+
 
     .highcharts-data-labels {
         visibility: hidden;
@@ -392,3 +338,45 @@
     .highcharts-xaxis-labels {
      visibility: hidden;
     }
+
+    .highcharts-axis-labels .highcharts-coloraxis-labels  {
+        x: 15;
+        width:100px;
+    }
+
+    rect.highcharts-plot-background {
+        x:44 !important;
+    }
+
+    rect.highcharts-plot-border {
+        x:53px;
+    }
+
+   g.highcharts-series  {
+/*    transform: translate(53px,30px);
+    min-width: 250px;*/
+ }
+
+    .highcharts-grid-line {
+        visibility: hidden;
+    }
+
+    .highcharts-axis-line {
+        visibility: hidden;
+    }
+
+
+  text[g.highcharts-axis-labels .highcharts-coloraxis-labels] {
+    y: 20;
+ }
+
+
+ /* navbar */
+
+ .navbar {
+    margin-bottom: 1px;
+    background-color: #eee;
+ }
+ .navbar-brand {
+    padding: 15px;
+ }
