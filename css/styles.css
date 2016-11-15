@@ -378,5 +378,6 @@
     background-color: #eee;
  }
  .navbar-brand {
+    padding-right: 0px;
     padding: 15px;
- }
+     }
