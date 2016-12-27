@@ -63,7 +63,7 @@ $(function updateChart3() {
         },
 
         yAxis: {
-            categories: ['Daycare','Youth','Senior','Library'],
+            categories: ['Daycare','Youth','Parks','Library'],
             title: null,
             style: {
                fontFamily: "Maven Pro"
